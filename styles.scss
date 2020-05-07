@@ -1,0 +1,96 @@
+$colorb_lg: white;
+$colorf_lg: black;
+$colorb_sm: black;
+$colorf_sm: white;
+
+%message {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    padding: 20px;
+}
+//large screen
+@media (min-width: 576px) {
+    body {
+        background-color: $colorb_lg;
+        color: $colorf_lg;
+    }
+    table {
+        border: 2px solid $colorf_lg;
+        th,
+        td {
+            border: 1px solid $colorf_lg;
+        }
+    }
+
+    .bold {
+        border: 1px solid $colorf_lg;
+    }
+    p {
+        color: $colorf_lg;
+    }
+}
+//small screen
+@media (max-width: 575px) {
+    body {
+        background-color: $colorb_sm;
+        color: $colorf_sm;
+    }
+    table {
+        border: 2px solid $colorf_sm;
+        th,
+        td {
+            border: 1px solid $colorf_sm;
+        }
+    }
+    .bold {
+        border: 1px solid $colorf_sm;
+    }
+    p {
+        color: $colorf_sm;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    @extend %message;
+}
+
+table {
+    @extend %message;
+
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    th {
+        background-color: lightgray;
+    }
+}
+
+.bold {
+    @extend %message;
+    font-weight: bold;
+}
+
+.row > div {
+    @extend %message;
+}
+
+a:hover {
+    font-size: larger;
+    color: red;
+}
+
+#personalPhoto {
+    width: 300px;
+    height: 300px;
+}
